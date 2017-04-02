@@ -1,10 +1,13 @@
+# coding=utf-8
+
+
 def parse_slug(link):
     ret = {
         'type': 'people'
     }
 
     if not link:
-        ret['name'] = '匿名用户'
+        ret['name'] = u'匿名用户'
         return ret
 
     if link.startswith('/org/'):
