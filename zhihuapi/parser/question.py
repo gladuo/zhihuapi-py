@@ -2,8 +2,9 @@ from .. import urls
 
 
 def answers(data):
-    data = data['data']
-    for obj in data:
+    paging = data['paging']
+    answer_list = data['data']
+    for obj in answer_list:
         question = obj['question']
         author = obj['author']
         obj['url'] = urls.answer(question['id'], obj['id'])
